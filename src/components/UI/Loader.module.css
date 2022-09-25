@@ -1,0 +1,23 @@
+.loader {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px dashed rgb(135, 26, 199);
+    animation: rotate 3s infinite linear;
+}
+
+/* .wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+} */
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+
+    to {
+        transform: rotate(360deg) scale(1.4);
+    }
+}

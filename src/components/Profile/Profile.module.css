@@ -1,0 +1,14 @@
+
+
+/* .content{
+    grid-area: c;
+    background-color: rgb(129, 209, 91);
+  } */
+  .content_logo{
+    width: 50px;
+    height: 50px;
+    background-color: #265f3e;
+    border-radius: 50%;
+  }
+
+  

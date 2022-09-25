@@ -1,0 +1,17 @@
+
+
+
+header div{
+    width: 50px;
+    height: 50px;
+    background-color: #6964ba;
+    border-radius: 50%;
+  }
+  
+  
+  
+  .header{
+    grid-area: h;
+    background-color: #7e7f55;
+  }
+  
