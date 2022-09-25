@@ -19,10 +19,12 @@ const UsersContainer = (props) => {
                 .then(response => {
                     props.toggleIsFetching(false);
                     props.setUsers(response.data);
+                    console.log(response.data)
                 })
 
         }
     }
+    
 
 
 
