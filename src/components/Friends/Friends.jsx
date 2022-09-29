@@ -3,8 +3,9 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import * as axios from 'axios';
 import classes from './Friends.module.css';
+import { NavLink } from 'react-router-dom';
 
-const Friends = (props) =>{
+const Friends = (props) => {
     const [friends, setFriends] = useState([])
     const [fetching, setFetching] = useState(true)
     const [currentPage, setCurrentPage] = useState(1)
@@ -13,12 +14,13 @@ const Friends = (props) =>{
     useEffect(() => {
         if (fetching) {
             console.log('fetching')
-            axios.get(`https://jsonplaceholder.typicode.com/posts?_limit=${pageSize}&_page=${currentPage}`)
+            axios.get(`https://jsonplaceholder.typicode.com/photos?_limit=${pageSize}&_page=${currentPage}`)
                 .then(response => {
                     setFriends([...friends, ...response.data])
                     setCurrentPage(prevState => prevState + 1)
+                    console.log(response)
                 })
-                .finally(() =>setFetching(false));
+                .finally(() => setFetching(false));
         }
     }, [fetching])
 
@@ -41,8 +43,11 @@ const Friends = (props) =>{
 
     return (
         <div className={classes.person}>
-              {friends.map(friend => <div key={friend.id}>
+            {friends.map(friend => <div key={friend.id}>
                 <div>{friend.title}</div>
+                <NavLink to={'/profile/' + friend.id}>
+                    <img className={classes.img} src={friend.thumbnailUrl}></img>
+                </NavLink>
             </div>)
             }
         </div>

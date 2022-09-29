@@ -29,22 +29,22 @@ switch (action.type) {
     return state;
 }
 
-export const setUsersAC = (users) => ({
+export const setUsers = (users) => ({
     type: 'SET-USERS',
     users,
 })
 
-export const totalUsersCountAC = (count) => ({
+export const totalUsersCount = (count) => ({
     type: 'TOTAL-COUNT',
     count,
 })
 
-export const setCurrentPageAC = (currentPage) => ({
+export const setCurrentPage = (currentPage) => ({
     type:'SET-CURRENT-PAGE',
     currentPage,
 })
 
-export const toggleIsFetchingAC = (isFetching) => ({
+export const toggleIsFetching = (isFetching) => ({
     type:'TOGGLE-IS-FETCHING',
     isFetching,
 })
